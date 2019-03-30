@@ -1,0 +1,44 @@
+<p>
+  User Id is {{id}}
+</p>
+<div class="container card" style="width:400px; margin-top: 100px;">
+  <div class="input-group mb-3" style="margin-top:20px;">
+    <div class="input-group-prepend">
+      <span class="input-group-text" id="inputGroup-sizing-default" style=" width:100px;">FirstName</span>
+    </div>
+    <input type="text" class="form-control" aria-label="Sizing example input"
+      aria-describedby="inputGroup-sizing-default">
+  </div>
+  <div class="input-group mb-3">
+
+    <div class="input-group-prepend">
+      <span class="input-group-text" id="inputGroup-sizing-default" style="width:100px">LastName</span>
+    </div>
+    <input type="text" class="form-control" aria-label="Sizing example input"
+      aria-describedby="inputGroup-sizing-default">
+  </div>
+  <div class="input-group mb-3">
+    <div class="input-group-prepend">
+      <span class="input-group-text" id="inputGroup-sizing-default" style="width:100px;">Email</span>
+    </div>
+    <input type="text" class="form-control" aria-label="Sizing example input"
+      aria-describedby="inputGroup-sizing-default">
+  </div>
+  <div class="input-group mb-3">
+    <div class="input-group-prepend">
+      <span class="input-group-text" id="basic-addon3" style="width:100px;">Phone</span>
+    </div>
+    <input type="text" class="form-control" id="basic-url" [(ngModel)]="username" aria-describedby="basic-addon3">
+  </div>
+  <div class="input-group mb-3">
+    <div class="input-group-prepend">
+      <span class="input-group-text" id="inputGroup-sizing-default" style="width:100px">Designation</span>
+    </div>
+    <input type="text" class="form-control" aria-label="Sizing example input"
+      aria-describedby="inputGroup-sizing-default">
+  </div>
+  <div class="col-6">
+    <button type="button" class="btn btn-primary" style="margin-bottom: 20px;">submit</button>
+  </div>
+</div>
+<app-sidenavbar></app-sidenavbar>

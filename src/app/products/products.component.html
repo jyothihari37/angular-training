@@ -1,0 +1,52 @@
+<app-header [title]="'products'" style="text-align: center"></app-header>
+<div class="row" style="background-color:midnightblue;height:200px;margin-left:0px;padding: 30px; padding-bottom: 0px">
+    <div class="col-4">
+        <app-statcard [count]="" [title]="'Total'" [iconClass]="'fa fa-users'" [color]="'purple'">
+        </app-statcard>
+    </div>
+    <div class="col-4">
+        <app-statcard [count]="" [title]="'Stock'" [iconClass]="'fa fa-list'" [color]="'green'">
+        </app-statcard>
+    </div>
+    <div class="col-4">
+        <app-statcard [count]="" [title]="'Sold'" [iconClass]="'fa fa-truck'" [color]="'red'">
+        </app-statcard>
+    </div>
+</div>
+<br>
+<button class="btn btn-primary " (click)="navigateToAddProduct()" style="float:right;">AddProduct</button>
+<br>
+<br>
+<div class="row" style="margin-left: 20px; text-align:center;">
+    <div class=" col-3">
+        <app-images [title]="'Ecology'" [price]="'185/-'" [image]="'assets/ecology.jpg'"></app-images>
+    </div>
+    <div class="col-3">
+        <app-images [title]="'Physical&Human Geography'" [price]="'245/-'" [image]="'assets/physics.jpg'">
+        </app-images>
+    </div>
+    <div class="col-3">
+        <app-images [title]="'Indian Polity'" [price]="'145/-'" [image]="'assets/indian.jpg'"></app-images>
+    </div>
+    <div class="col-3">
+        <app-images [title]="'Technology'" [price]="'275/-'" [image]="'assets/technology.jpg'"></app-images>
+    </div>
+</div>
+<br>
+<div class="row" style="margin-left: 20px; text-align: center; ">
+    <div class="col-3">
+        <app-images [title]="'HomeAppliances'" [image]="'assets/tv.jpg'" [price]="'18500/-'"></app-images>
+    </div>
+    <div class="col-3">
+        <app-images [title]="'Fossil'" [image]="'assets/watch.jpg'" [price]="'13,000/-'"></app-images>
+    </div>
+    <div class="col-3">
+        <app-images [title]="'iBall Soundwave'" [image]="'assets/speakers.jpg'" [price]="'500/-'"></app-images>
+    </div>
+    <div class="col-3">
+        <app-images [title]="'Mobile MI Y2'" [image]="'assets/phone.jpg'" [price]="'10,000/-'"></app-images>
+    </div>
+</div>
+
+
+<app-user-table [data]="products" [tableHeaders]="tableHeaders"></app-user-table>

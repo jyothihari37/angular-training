@@ -1,0 +1,33 @@
+<app-header [title]="'Dashboard'" style="text-align: center; margin-left:0px;"></app-header>
+<div class="row" style="background-color: rgb(206, 21, 82); margin-left:0px;padding: 30px; padding-bottom: 0px">
+  <div class="col-3">
+    <app-statcard [count]="42" [title]="'users'" [iconClass]="'fa fa-users'" [color]="'purple'"></app-statcard>
+  </div>
+  <div class="col-3">
+    <app-statcard [count]="70" [title]="'orders'" [iconClass]="'fa fa-cart-plus'" [color]="'red'"></app-statcard>
+  </div>
+  <div class="col-3">
+    <app-statcard [count]="150" [title]="'Requests'" [iconClass]="'fa fa-volume-control-phone'" [color]="'yellow'">
+    </app-statcard>
+  </div>
+  <div class="col-3">
+    <app-statcard [count]="100" [title]="'Delivered'" [iconClass]="'fa fa-truck'" [color]="'green'"></app-statcard>
+  </div>
+</div>
+<br>
+<div class="row offset-1 col-10">
+  <div style="color:mediumblue">
+    <app-analytics [amount]="11000" [stock]="'sold'"></app-analytics>
+  </div>
+  <div style="color:mediumvioletred">
+    <app-analytics [amount]="2000" [stock]="'Logistics'"></app-analytics>
+  </div>
+  <div style="color:olivedrab">
+    <app-analytics [amount]="1500" [stock]="'marketing'"></app-analytics>
+  </div>
+</div>
+<div classs="row">
+  <div class="col-12">
+    <app-user-table [data]="products" [tableHeaders]="tableHeaders"></app-user-table>
+  </div>
+</div>

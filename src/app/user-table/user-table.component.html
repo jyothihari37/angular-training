@@ -1,0 +1,18 @@
+<div class="card">
+  <div class="card-body">
+    <table class="table table-stripped">
+      <thead>
+        <tr>
+          <th scope="col" *ngFor="let header of tableHeaders">{{header}}</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr *ngFor="let user of data;let i=index;">
+          <td>{{i+1}}</td>
+          <td *ngFor="let key of getKeys()">{{user[key]}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
