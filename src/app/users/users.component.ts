@@ -110,7 +110,7 @@ export class UsersComponent {
   //     status: 'active'
   //   }
   // ]
-  tableHeaders = ["Sno", "First", "Last", "Email", "Phone", "designation", "status"]
+  tableHeaders = ["Sno", "id", "username", "Email", "Phone", "designation", "firstname", "lastname", "status", "ceatedby"]
 
   constructor(private router: Router, private userService: UserService) { }
   users = [];

@@ -1,4 +1,4 @@
-<div class="jumbotron">
+<!-- <div class="jumbotron">
   <div class="container" style="background-color:skyblue">
     <div class=" row">
       <div class="col-md-6 offset-md-3">
@@ -57,4 +57,71 @@
           </div>
         </form>
       </div>
-    </div>
+    </div> -->
+
+
+<div class="card" style="margin-right: 390px;margin-left: 390px;margin-top: 90px">
+  <div class="form-group">
+    <div class="card-header">FORM</div>
+    <form [formGroup]="addProductsForm" (ngSubmit)=" onSubmit()">
+
+      <div class="form-group">
+        <label>Name</label>
+        <input type="text" formControlName="name" class="form-control"
+          [ngClass]="{ 'is-invalid': submitted && f.name.errors }" />
+        <div *ngIf="submitted && f.name.errors" class="invalid-feedback">
+          <div *ngIf="f.name.errors.required">Name is required</div>
+          <div *ngIf="f.name.errors.minlength"> Minimum length is 5</div>
+          <div *ngIf="f.name.errors.maxlength"> Maximum length is 100</div>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label>Code</label>
+        <input type="text" formControlName="code" class="form-control"
+          [ngClass]="{ 'is-invalid': submitted && f.code.errors }" />
+        <div *ngIf="submitted && f.code.errors" class="invalid-feedback">
+          <div *ngIf="f.code.errors.required">Name is required</div>
+          <div *ngIf="f.code.errors.minlength"> Minimum length is 3</div>
+          <div *ngIf="f.code.errors.maxlength"> Maximum length is 20</div>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label>Amount</label>
+        <input type="number" formControlName="price" class="form-control"
+          [ngClass]="{ 'is-invalid': submitted && f.price.errors }" />
+        <div *ngIf="submitted && f.price.errors" class="invalid-feedback">
+          <div *ngIf="f.price.errors.required">Price is required</div>
+          <div *ngIf="f.price.errors.minlength"> Minimum price is 1</div>
+          <div *ngIf="f.price.errors.maxlength"> Maximum price is 1000000</div>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label>Description</label>
+        <input type="text" formControlName="description" class="form-control"
+          [ngClass]="{ 'is-invalid': submitted && f.description.errors }" />
+        <div *ngIf="submitted && f.description.errors" class="invalid-feedback">
+          <div *ngIf="f.description.errors.required">Name is required</div>
+          <div *ngIf="f.description.errors.minlength"> Minimum length is 10</div>
+          <div *ngIf="f.description.errors.maxlength"> Maximum length is 250</div>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label>Quantity</label>
+        <input type="text" formControlName="quantity" class="form-control"
+          [ngClass]="{ 'is-invalid': submitted && f.quantity.errors }" />
+        <div *ngIf="submitted && f.quantity.errors" class="invalid-feedback">
+          <div *ngIf="f.quantity.errors.required">Name is required</div>
+          <div *ngIf="f.quantity.errors.minlength"> Minimum length is 10</div>
+          <div *ngIf="f.quantity.errors.maxlength"> Maximum length is 250</div>
+        </div>
+      </div>
+
+      <button type="submit" class="btn btn-primary">SUBMIT</button>
+
+    </form>
+  </div>
+</div>

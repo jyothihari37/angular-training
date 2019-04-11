@@ -10,10 +10,11 @@ import { ProductServiceService } from '../product-service.service';
 export class ProductsComponent implements OnInit {
 
   products = []
-  tableHeaders = ["sno", "name", "price", "model", "country"]
+  tableHeaders = ["sno", "productId", "name", "code", "manufacturerid", "price", "description", "quantity", "createdat", "username"]
 
 
-  constructor(private productService: ProductServiceService) { }
+  constructor(private productService: ProductServiceService,
+    private router: Router) { }
 
   async ngOnInit() {
     const products = await this.productService.getProducts()
@@ -23,6 +24,9 @@ export class ProductsComponent implements OnInit {
 
 
   navigateToAddProduct() {
-    //  this.router.navigate(["products/addproduct"])
+    this.router.navigate(["products/addproduct"])
+  }
+  edit(id) {
+    console.log(`product component printing ${id}`)
   }
 }

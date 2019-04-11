@@ -28,6 +28,7 @@ import { SidenavbarComponent } from './sidenavbar/sidenavbar.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ProductServiceService } from './product-service.service';
 import { UserService } from './user.service';
+import { TablewithactionsComponent } from './tablewithactions/tablewithactions.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -49,7 +50,8 @@ import { UserService } from './user.service';
     ImagesComponent,
     FormsComponent,
     AddproductComponent,
-    SidenavbarComponent
+    SidenavbarComponent,
+    TablewithactionsComponent
   ],
   imports: [
     BrowserModule,

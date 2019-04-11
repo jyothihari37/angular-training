@@ -1,4 +1,4 @@
-<p>
+<!-- <p>
   User Id is {{id}}
 </p>
 <div class="container card" style="width:400px; margin-top: 100px;">
@@ -40,5 +40,91 @@
   <div class="col-6">
     <button type="button" class="btn btn-primary" style="margin-bottom: 20px;">submit</button>
   </div>
-</div>
+</div> -->
 <app-sidenavbar></app-sidenavbar>
+
+<div class="jumbotron">
+  <div class="container" style="background-color:skyblue">
+    <div class=" row">
+      <div class="col-md-6 offset-md-3">
+        <h3>USERS FORM</h3>
+        <form [formGroup]="usersForm" (ngSubmit)="onSubmit()">
+          <div class="form-group">
+            <label> UserName</label>
+            <input type="text" formControlName="username" class="form-control"
+              [ngClass]="{ 'is-invalid': submitted && f.username.errors }">
+            <div *ngIf="submitted && f.username.errors" class="invalid-feedback">
+              <div *ngIf="f.username.errors.required">usersName is required</div>
+              <div *ngIf="f.username.errors.minlength">usersName must be at least 2 characters</div>
+              <div *ngIf="f.username.errors.maxlength">usersName requires max 100 characters</div>
+            </div>
+          </div>
+          <div class="form-group">
+            <label> firstname</label>
+            <input type="text" formControlName="firstname" class="form-control"
+              [ngClass]="{ 'is-invalid': submitted && f.firstname.errors }">
+            <div *ngIf="submitted && f.firstname.errors" class="invalid-feedback">
+              <div *ngIf="f.firstname.errors.required">firstName is required</div>
+              <div *ngIf="f.firstname.errors.minlength">firstName must be at least 2 characters</div>
+              <div *ngIf="f.firstname.errors.maxlength">firstName requires max 100 characters</div>
+            </div>
+          </div>
+          <div class="form-group">
+            <label> lastname</label>
+            <input type="text" formControlName="lastname" class="form-control"
+              [ngClass]="{ 'is-invalid': submitted && f.lastname.errors }">
+            <div *ngIf="submitted && f.lastname.errors" class="invalid-feedback">
+              <div *ngIf="f.lastname.errors.required">lastName is required</div>
+              <div *ngIf="f.lastname.errors.minlength">lastName must be at least 2 characters</div>
+              <div *ngIf="f.lastname.errors.maxlength">lastName requires max 100 characters</div>
+            </div>
+          </div>
+          <div class="form-group">
+            <label> designation</label>
+            <input type="text" formControlName="designation" class="form-control"
+              [ngClass]="{ 'is-invalid': submitted && f.designation.errors }">
+            <div *ngIf="submitted && f.designation.errors" class="invalid-feedback">
+              <div *ngIf="f.designation.errors.required">designation is required</div>
+              <div *ngIf="f.designation.errors.maxlength">designation max 50 characters</div>
+            </div>
+          </div>
+          <div class="form-group">
+            <label> email</label>
+            <input type="text" formControlName="email" class="form-control"
+              [ngClass]="{ 'is-invalid': submitted && f.email.errors }">
+            <div *ngIf="submitted && f.email.errors" class="invalid-feedback">
+              <div *ngIf="f.email.errors.required">email is required</div>
+              <div *ngIf="f.email.errors.maxlength">email max 350 characters</div>
+            </div>
+          </div>
+          <div class="form-group">
+            <label> mobile</label>
+            <input type="text" formControlName="mobile" class="form-control"
+              [ngClass]="{ 'is-invalid': submitted && f.mobile.errors }">
+            <div *ngIf="submitted && f.mobile.errors" class="invalid-feedback">
+              <div *ngIf="f.mobile.errors.required"> mobile is required</div>
+              <div *ngIf="f.mobile.errors.maxlength">mobile requires max 10 characters</div>
+            </div>
+          </div>
+          <div class="form-group">
+            <label> status</label>
+            <input type="text" formControlName="status" class="form-control"
+              [ngClass]="{ 'is-invalid': submitted && f.status.errors }">
+            <div *ngIf="submitted && f.status.errors" class="invalid-feedback">
+              <div *ngIf="f.status.errors.required">status is required</div>
+            </div>
+          </div>
+          <div class="form-group">
+            <label> isdeleted</label>
+            <input type="text" formControlName="isdeleted" class="form-control"
+              [ngClass]="{ 'is-invalid': submitted && f.isdeleted.errors }">
+            <div *ngIf="submitted && f.isdeleted.errors" class="invalid-feedback">
+              <div *ngIf="f.isdeleted.errors.required"> is required</div>
+            </div>
+          </div>
+          <div><br>
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </div>
+        </form>
+      </div>
+    </div>
